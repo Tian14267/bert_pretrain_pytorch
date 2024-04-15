@@ -1,6 +1,6 @@
 # bert_pretrain_pytorch
 
-本代码是基于pytorch的框架下，对Bert算法进行预训练。当前本代码中只加入了Bert对数据mask的任务预测，即掩码语言模型（Masked Language Model，MLM）。而另一个任务 下一句预测（Next Sentence Prediction，NSP）暂不包括在本代码中。
+本代码是基于pytorch的框架下，对Bert算法进行预训练。
 
 
 ## 训练Bert模型
@@ -36,8 +36,19 @@ THUCNews数据
 ```
 
 #### 训练
+
+##### 训练方案 -1
+本方案代码中只加入了Bert对数据mask的任务预测，即掩码语言模型（Masked Language Model，MLM）。而另一个任务 下一句预测（Next Sentence Prediction，NSP）暂不包括在本代码中。
 ```
 单卡训练：
 
-sh pretrain_Bert_fffan.sh
+sh pretrain_Bert_fffan_method_1.sh
+```
+
+##### 训练方案 -2
+先预处理数据，并进行保存。再载入保存的数据，进行模型训练。包含两个任务：MLM和NSP 。
+```
+单卡训练：
+
+sh pretrain_Bert_fffan_method_2.sh
 ```
