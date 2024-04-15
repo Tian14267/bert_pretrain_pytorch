@@ -4,7 +4,7 @@
 @Time:2024/04/07 2:58 下午
 @Author: fffan
 '''
-
+import os
 import random
 import torch
 import pickle
@@ -12,7 +12,7 @@ import argparse
 import collections
 import click
 from tqdm import tqdm
-from transformer.tokenization import BertTokenizer
+from model_info.tokenization import BertTokenizer
 from torch.utils.data import Dataset
 from loguru import logger
 
@@ -402,6 +402,9 @@ def get_parser():
 def main():
     #####
     args =  get_parser()
+
+    os.makedirs(args.output_file, exist_ok=True)
+    args.output_file = os.path.join(args.output_file,"data")
 
     logger.info("*** Loading the tokenizer ***")
     tokenizer = BertTokenizer.from_pretrained(args.model_path)
