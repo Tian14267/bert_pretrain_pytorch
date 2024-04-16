@@ -56,3 +56,16 @@ sh pretrain_Bert_fffan_method_1.sh
 
 sh pretrain_Bert_fffan_method_2.sh
 ```
+
+##### 训练方案 -3
+单机多卡分布式训练。
+```
+sh pretrain_Bert_distributed_fffan.sh
+```
+或者
+```markdown
+CUDA_VISIBLE_DEVICES=2,3 python -m torch.distributed.launch --nproc_per_node=2 pretrain_Bert_distributed.py \
+                        --model_path "./pretrain_models/bert-base-chinese" \
+                        --output_dir "./output_dir/pretrain_base" \
+                        --train_batch_size 8
+```
