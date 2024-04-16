@@ -58,7 +58,7 @@ sh pretrain_Bert_fffan_method_2.sh
 ```
 
 ##### 训练方案 -3
-单机多卡分布式训练。
+**单机多卡**分布式训练。
 ```
 sh pretrain_Bert_distributed_fffan.sh
 ```
