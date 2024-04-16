@@ -8,7 +8,7 @@
   "intermediate_size": 3072, 
   "max_position_embeddings": 1024,
   "num_attention_heads": 24,
-  "num_hidden_layers": 96,
+  "num_hidden_layers": 72,
   "pooler_fc_size": 1536,
   "pooler_num_attention_heads": 12, 
   "pooler_num_fc_layers": 3, 
