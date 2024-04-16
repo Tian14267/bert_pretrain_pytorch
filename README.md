@@ -35,6 +35,10 @@ THUCNews数据
 提取码：u9fz
 ```
 
+注：
+文件夹 ```./data``` 中提供了使用 ```create_pretraining_data.py``` 处理好的训练文件```bert_chinese_fffan_data.eval```，可以直接使用。
+
+
 #### 训练
 
 ##### 训练方案 -1
