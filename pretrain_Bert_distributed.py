@@ -176,7 +176,7 @@ def get_parser():
     parser.add_argument("--no_cuda",
                         action='store_true',
                         help="Whether not to use CUDA when available")
-    parser.add_argument("--local_rank",
+    parser.add_argument("--local-rank",
                         type=int,
                         default=-1,
                         help="local_rank for distributed training on gpus")
