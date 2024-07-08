@@ -15,7 +15,7 @@ git clone https://github.com/Tian14267/bert_pretrain_pytorch.git
 - 创建 Conda 环境:
 
 ``` sh
-conda create -n asr python=3.8
+conda create -n bert_train python=3.8
 conda activate bert_train
 pip install -r requirements.txt
 ```
