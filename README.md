@@ -103,3 +103,8 @@ CUDA_VISIBLE_DEVICES="2,3,4,5" horovodrun -np 4 python pretrain_Bert_distributed
 https://github.com/horovod/horovod/blob/master/docs/pytorch.rst
 
 ```
+
+
+### 注意
+1：当修改 ```max_seq_len``` 参数时，注意 ```./model_info/tokenization.py`` 中的 ```max_len = 512``` 设置是否和max_seq_len一致
+2：注意 预训练模型 配置文件中 ```max_position_embeddings``` 是否与 max_position_embeddings
